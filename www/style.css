@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 448px;
+    background: #DDDDDD;
+    font-family: Hevletica, sans-serif;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+header {
+    width: 80%;
+    margin: 10px auto;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+header a {
+    color: #000;
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+main {
+    padding: 10px 0px 10px 3px;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+img {
+border: 1px solid #000;
+max-width: 100%;
+height: auto;
+}
+
+img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+} 
+
+
+/* .gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+main .gallery img {
+    border: 1px solid #000;
+    width: 400px;
+    min-width: 150px;
+    min-height: 100px;
+}
+
+main .gallery img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+} */
+
+.photo {
+    background-image: url(./images/small.png);
+    min-width: 448px;
+    min-height: 320px;
+    background-size: cover;
+    border: 1px solid #000;
+}
+
+
+nav,
+.nav-gal {
+    width: 80%;
+    margin: 10px auto;
+}
+
+nav ul,
+.nav-gal ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li,
+.nav-gal ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a,
+.nav-gal ul li a {
+    width: 100%;
+    margin: 3px;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    background: #DDDDDD;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a:hover,
+.nav-gal ul li a:hover {
+    background: #999999;
+    box-shadow: 0 15px 15px rgba(161, 41, 41, 0.5);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+nav ul li a:active,
+.nav-gal ul li a:active {
+    background: #999999;
+    box-shadow: 0 20px 20px rgba(161, 41, 41, 0.5);
+}
+
+.login-cont {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    background-color: #8A9AB1;
+    box-shadow: 0 0 10px rgba(231, 184, 184, 0.1);
+    border: none;
+    border-radius: 5px;
+}
+
+.login-error {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    color: #c24e20;
+    /* background-color: #c24e20; */
+    box-shadow: 0 0 10px rgba(231, 184, 184, 0.1);
+    border: none;
+    border-radius: 5px;
+}
+
+.login_form {
+    width: 80%;
+    margin: 1em auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 6px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-form .alertButton {
+    background-color: rgb(234, 83, 83);
+    color: #000;
+}
+
+footer {
+    width: 80%;
+    margin: 1em auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.footer_menu a {
+    color: #000;
+}
+
+
+.footer_menu a:hover {
+    box-shadow: 0 15px 15px rgba(161, 41, 41, 0.5);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.desc {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+.subdesc {
+    font-size: 12px;
+}
+
+.nav-gal ul li span {
+    display: block;
+    text-align: center;
+    font-size: large;
+}
+
+.postimage {
+    display: flex;
+		flex-direction: column-reverse;
+    /* align-items: center; */
+		margin-bottom: 1em;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.postitem {
+
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 1em;
+    justify-content: center;
+}
+
+.postitem h2 {
+text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        min-width: 700px;
+    }
+		
+	.postimage {
+    display: flex;
+	flex-direction: row;
+
+    }
+
+    .postitem {
+        width: 50%;
+        flex-direction: row;
+        gap: 1em;
+        margin: 1em;
+    }
+
+
+
+    .photo {
+        background-image: url(./images/site.png);
+        min-width: 700px;
+        min-height: 500px;
+    }
+
+    .nav-gal ul {
+        justify-content: space-between;
+    }
+
+    nav ul,
+    .nav-gal ul {
+        flex-direction: row;
+    }
+		
+
+}
+
+.notice {
+    width: 80%;
+    margin: 1em auto;
+}
+
+
+.notice p {
+    width: 100%;
+    margin: 1em auto;
+    padding: 0 0 0 2em;
+}
+
+
+
+.carousel {
+
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    width: 75%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.search-box {
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		text-align: center;
+		
+
+		
+    
+}
+
+.search-box input.search-txt,
+.search-box select {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: #f0f0f0;
+    color: #333;
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 210px;
+		margin: 1px;
+		background: #DDDDDD;		
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.search-box a.search-btn,
+.search-box input {
+    background: #4D7FA4;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    width: 210px;
+		margin: 1px;
+			
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.search-box input.search-txt::placeholder {
+    color: #999;
+}
