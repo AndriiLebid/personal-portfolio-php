@@ -1,383 +1,252 @@
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-html {
-    height: 100%;
+/* Body styling */
+html, body {
+    height: 100%; /* Make sure the body takes full height */
 }
 
 body {
-    min-width: 448px;
-    background: #DDDDDD;
-    font-family: Hevletica, sans-serif;
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+    line-height: 1.6; /* Better readability */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark grey text for contrast */
     display: flex;
-    height: 100%;
-    flex-direction: column;
+    flex-direction: column; /* Stack elements vertically */
 }
 
+/* Header styling */
 header {
-    width: 80%;
-    margin: 10px auto;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    background: #f8f8f8; /* Light grey for contrast */
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 70px;
+    line-height: 98px;
     font-weight: 400;
-    font-size: 30px;
 }
 
-header a {
-    color: #000;
+header h1 a{
     text-decoration: none;
+    color: #333
 }
 
-header a:hover {
-    opacity: 0.5;
-    transition: 0.5s;
+/* Navigation styling */
+nav {
+    background: #ffffff; /* White background */
+    border-bottom: 1px solid #ddd; /* Subtle border */
 }
 
+nav ul {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark grey for the link */
+    font-weight: bold; /* Make link bold */
+}
+
+/* Main content styling */
 main {
-    padding: 10px 0px 10px 3px;
-    flex: 1 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    flex-direction: column;
-    font-size: 14px;
-}
-
-img {
-border: 1px solid #000;
-max-width: 100%;
-height: auto;
-}
-
-img:hover {
-    opacity: 0.5;
-    transition: 0.5s;
-} 
-
-
-/* .gallery-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-}
-
-main .gallery img {
-    border: 1px solid #000;
-    width: 400px;
-    min-width: 150px;
-    min-height: 100px;
-}
-
-main .gallery img:hover {
-    opacity: 0.5;
-    transition: 0.5s;
-} */
-
-.photo {
-    background-image: url(./images/small.png);
-    min-width: 448px;
-    min-height: 320px;
-    background-size: cover;
-    border: 1px solid #000;
-}
-
-
-nav,
-.nav-gal {
-    width: 80%;
-    margin: 10px auto;
-}
-
-nav ul,
-.nav-gal ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li,
-.nav-gal ul li {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li a,
-.nav-gal ul li a {
-    width: 100%;
-    margin: 3px;
-    padding: 10px;
-    text-decoration: none;
-    color: #000;
-    background: #DDDDDD;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
-}
-
-nav ul li a:hover,
-.nav-gal ul li a:hover {
-    background: #999999;
-    box-shadow: 0 15px 15px rgba(161, 41, 41, 0.5);
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-nav ul li a:active,
-.nav-gal ul li a:active {
-    background: #999999;
-    box-shadow: 0 20px 20px rgba(161, 41, 41, 0.5);
-}
-
-.login-cont {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
     padding: 20px;
-    background-color: #8A9AB1;
-    box-shadow: 0 0 10px rgba(231, 184, 184, 0.1);
-    border: none;
-    border-radius: 5px;
+    max-width: 1200px; /* Limit the width */
+    margin: auto; /* Center the content */
+    flex: 1; /* Allow main to grow and fill space */
 }
 
-.login-error {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    color: #c24e20;
-    /* background-color: #c24e20; */
-    box-shadow: 0 0 10px rgba(231, 184, 184, 0.1);
-    border: none;
-    border-radius: 5px;
+/* Notice box styling */
+.notice {
+    background: #f9f9f9; /* Light grey background */
+    padding: 15px;
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-bottom: 20px; /* Space below */
 }
 
-.login_form {
-    width: 80%;
-    margin: 1em auto;
+.notice h5{
+		margin-bottom: 20px;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px; /* Space below */
+		align-items: center;
+		justify-content: center;
+}
+
+.search-txt {
+    flex: 1; /* Take available space */
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and selects */
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+.search-btn, select {
+    padding: 10px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+
 }
 
-.input-group input,
-.input-group select {
-    padding: 6px;
-    border: none;
-    border-radius: 5px;
+
+/* Project post image styling */
+.postimage {
+    display: flex; /* Use flexbox for layout */
+    margin-bottom: 20px; /* Space between posts */
+		margin-top: 20px; /* Space between posts */
 }
 
-.login-form button {
-    padding: 6px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+
+
+.postitem {
+    display: flex; /* Use flexbox for the post item */
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 10px; /* Space below each post */
+		
 }
 
-.login-form .alertButton {
-    background-color: rgb(234, 83, 83);
-    color: #000;
+.postitem img {
+		width: 300px; /* Set a fixed width for the image */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    margin-right: 20px; /* Space between image and text */
 }
 
+.postitem div {
+    flex: 1; /* Allow the text container to take the remaining space */
+}
+
+
+
+
+
+/* Footer styling */
 footer {
-    width: 80%;
-    margin: 1em auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
+    background: #f8f8f8; /* Light grey for footer */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding for spacing */
+}
+
+.footer_menu {
+    margin: 5px 0; /* Margin for spacing */
 }
 
 .footer_menu a {
-    color: #000;
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark grey for the link */
 }
 
-
-.footer_menu a:hover {
-    box-shadow: 0 15px 15px rgba(161, 41, 41, 0.5);
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-.desc {
-    margin: 0 0 5px 0;
-    font-size: 14px;
-}
-
-.subdesc {
-    font-size: 12px;
-}
-
-.nav-gal ul li span {
-    display: block;
-    text-align: center;
-    font-size: large;
-}
-
-.postimage {
-    display: flex;
-		flex-direction: column-reverse;
-    /* align-items: center; */
-		margin-bottom: 1em;
-		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
-}
-
-.postitem {
-
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    margin: 1em;
-    justify-content: center;
-}
-
-.postitem h2 {
-text-align: center;
-}
-
-
-
-
-@media only screen and (min-width: 600px) {
-
-    body {
-        min-width: 700px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically on small screens */
     }
-		
-	.postimage {
-    display: flex;
-	flex-direction: row;
-
-    }
-
-    .postitem {
-        width: 50%;
-        flex-direction: row;
-        gap: 1em;
-        margin: 1em;
-    }
-
-
-
-    .photo {
-        background-image: url(./images/site.png);
-        min-width: 700px;
-        min-height: 500px;
-    }
-
-    .nav-gal ul {
-        justify-content: space-between;
-    }
-
-    nav ul,
-    .nav-gal ul {
-        flex-direction: row;
-    }
-		
-
-}
-
-.notice {
-    width: 80%;
-    margin: 1em auto;
-}
-
-
-.notice p {
-    width: 100%;
-    margin: 1em auto;
-    padding: 0 0 0 2em;
-}
-
-
-
-.carousel {
-
-    margin: auto;
-    position: relative;
-    justify-content: center;
-    width: 75%;
-    height: 600px;
-    overflow: hidden;
-}
-
-.carousel-item {
-
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.search-box {
-    margin-bottom: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-		text-align: center;
-		
-
-		
     
+    .search-box {
+        flex-direction: column; /* Stack search inputs vertically */
+    }
+
+    .search-txt, .search-btn, select {
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width on small screens */
+    }
+		
+		
+		 .login-cont {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .login-form {
+        padding: 15px; /* Add padding inside the form */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Space below each button */
+    }
+		
+		
 }
 
-.search-box input.search-txt,
-.search-box select {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background: #f0f0f0;
-    color: #333;
-    border: 2px solid #ccc;
-    padding: 10px;
-    width: 210px;
-		margin: 1px;
-		background: #DDDDDD;		
-		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+
+
+/* Login Page Styles */
+.login-cont {
+    display: flex; /* Use flexbox to center the form */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 80vh; /* Minimum height for the login container */
+    padding: 20px; /* Padding around the container */
+    background-color: #f9f9f9; /* Light grey background for the form container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px; /* Margin around the container */
 }
 
-.search-box a.search-btn,
-.search-box input {
-    background: #4D7FA4;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    border: none;
-    width: 210px;
-		margin: 1px;
-			
-		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+.login-form {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit width */
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack elements vertically */
 }
 
-.search-box input.search-txt::placeholder {
-    color: #999;
+.input-group {
+    margin-bottom: 15px; /* Space below each input group */
+}
+
+.input-group label {
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold label for emphasis */
+    color: #333; /* Dark grey text for visibility */
+}
+
+.input-group input {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input */
+}
+
+/* Button styles */
+button {
+    padding: 10px; /* Padding inside buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* White text */
+    font-size: 16px; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button[type="reset"] {
+    background-color: #6c757d; /* Secondary color for reset button */
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268; /* Darker grey on hover */
 }
