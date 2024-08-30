@@ -53,6 +53,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px; /* Space between links */
+
 }
 
 nav ul li a {
@@ -68,6 +69,8 @@ main {
     margin: auto; /* Center the content */
     flex: 1; /* Allow main to grow and fill space */
 }
+
+
 
 /* Notice box styling */
 .notice {
@@ -133,19 +136,31 @@ main {
     flex: 1; /* Allow the text container to take the remaining space */
 }
 
+.photo {
+    background-image: url(./images/small.png);
+    min-width: 448px;
+    min-height: 320px;
+    background-size: cover;
+    border: 1px solid #000;
+}
+
 
 
 
 
 /* Footer styling */
 footer {
+	
+		display: flex; /* Use flexbox for layout */
     background: #f8f8f8; /* Light grey for footer */
-    text-align: center; /* Center the text */
     padding: 20px 0; /* Padding for spacing */
+		align-items: center;
+		justify-content: center;
+		direction: row;	
 }
 
 .footer_menu {
-    margin: 5px 0; /* Margin for spacing */
+    margin: 5px 15px; /* Margin for spacing */
 }
 
 .footer_menu a {
@@ -183,6 +198,12 @@ footer {
         margin-bottom: 10px; /* Space below each button */
     }
 		
+		.photo {
+        background-image: url(./images/site.png);
+        min-width: 700px;
+        min-height: 500px;
+    }
+		
 		
 }
 
@@ -193,7 +214,7 @@ footer {
     display: flex; /* Use flexbox to center the form */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    min-height: 80vh; /* Minimum height for the login container */
+    min-height: 60vh; /* Minimum height for the login container */
     padding: 20px; /* Padding around the container */
     background-color: #f9f9f9; /* Light grey background for the form container */
     border-radius: 8px; /* Rounded corners */
@@ -249,4 +270,30 @@ button[type="reset"] {
 
 button[type="reset"]:hover {
     background-color: #5a6268; /* Darker grey on hover */
+}
+
+
+
+
+.carousel {
+
+    margin: auto;
+    /*position: relative; */
+    justify-content: center;
+    width: 75%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item {
+
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
 }
