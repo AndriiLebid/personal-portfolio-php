@@ -6,10 +6,10 @@
 <div class="notice">
 
     
-				<div class = 'postimage'>
+				<div class = 'postimage postimageitemdirection'>
 				
 								    <a target="_blank" href="index.php">
-											<img src="./images/contacts.png" alt="contacts" width="800" height="600">
+											<img src="./images/contacts.png" alt="contacts">
 										</a>
 					
 				</div>
