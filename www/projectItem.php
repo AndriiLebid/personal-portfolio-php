@@ -24,8 +24,8 @@
             while ($row = $result->fetch_assoc()) {
 
                 echo "<hr>";
-                echo "<div class = 'postimage'>";
-                echo "<div class='postitem'>";
+                echo "<div class = 'postimage postimageitemdirection'>";
+                echo "<div class='postitem postitemminsize'>";
                 if ($row["images"] !== null) {
                     echo  '<div class="carousel">';
                     $arrayImage = explode(", ", $row["images"]);

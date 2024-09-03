@@ -2,11 +2,18 @@
 <?php include 'inc/nav.php'; ?>
 
 <main>
-  <div class="gallery">
-    <a target="_blank" href="index.php">
-      <img src="./images/contacts.png" alt="Picture#1" width="488" height="347">
-    </a>
-    <div class="desc">I prefer e-mailing</div>
-  </div>
+
+<div class="notice">
+
+    
+				<div class = 'postimage'>
+				
+								    <a target="_blank" href="index.php">
+											<img src="./images/contacts.png" alt="contacts" width="800" height="600">
+										</a>
+					
+				</div>
+
+
 </main>
 <?php include 'inc/footer.php'; ?>

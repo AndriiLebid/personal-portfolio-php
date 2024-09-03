@@ -5,9 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+	overflow: scroll;
+
+}
+
+
 /* Body styling */
 html, body {
     height: 100%; /* Make sure the body takes full height */
+
 }
 
 body {
@@ -122,7 +129,7 @@ main {
     display: flex; /* Use flexbox for the post item */
     align-items: flex-start; /* Align items at the start */
     margin-bottom: 10px; /* Space below each post */
-		min-width:320px;
+
 }
 
 .postitem img {
@@ -135,6 +142,29 @@ main {
 .postitem div {
     flex: 1; /* Allow the text container to take the remaining space */
 }
+
+.divcenter {
+	align-items: center;
+}
+
+.postimageitemdirection {
+	 flex-direction: column;
+	 align-items: center;
+	 min-width: 800px;
+}
+
+.postitemminsize{
+	min-width: 800px;
+}
+
+
+.postimageitemdirection img {
+		width: 800px; /* Set a fixed width for the image */
+    height: 600px; /* Set a fixed height for the image */
+    margin-right: 20px; /* Space between image and text */
+		
+}
+
 
 
 
@@ -163,8 +193,19 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+	
+html{
+			display: flex;
+}
+	
+	header h1 {
+		font-size: 40px;
+	}
+	
     nav ul {
         flex-direction: column; /* Stack links vertically on small screens */
+				align-items: center;
+				justify-content: center;
     }
     
     .search-box {
@@ -191,7 +232,12 @@ footer {
         margin-bottom: 10px; /* Space below each button */
     }
 		
-		
+		.postimage {
+    display: flex; /* Use flexbox for layout */
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
 		
 		
 }

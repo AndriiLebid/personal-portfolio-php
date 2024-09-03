@@ -9,8 +9,8 @@
 
         <hr>
 				<div class = 'postimage'>
-					<div class='postitem'>
-								<img src="gallery/hotel_1.png" alt="Andrii Lebid">
+					<div class="postitem divcenter">
+								<img src="images/me.png" alt="Andrii Lebid">
 					</div>
 					
 					<div class='postitem'>
